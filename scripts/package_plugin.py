@@ -5,14 +5,14 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / 'plugins/jira-workflow-guard'
+PLUGIN = ROOT / 'plugins/shopil-plugin'
 
 
 def build(output=None):
     version = json.loads((PLUGIN / 'plugin.json').read_text(encoding='utf-8'))['version']
     output = Path(output) if output else ROOT / 'dist'
     output.mkdir(parents=True, exist_ok=True)
-    target = output / f'jira-workflow-guard-{version}.zip'
+    target = output / f'shopil-plugin-{version}.zip'
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(PLUGIN.rglob('*')):
             if path.is_file() and not any(p in {'__pycache__', '.git', '.venv'} for p in path.parts) and path.suffix != '.pyc':

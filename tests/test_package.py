@@ -8,7 +8,7 @@ import unittest
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / 'plugins/jira-workflow-guard'
+PLUGIN = ROOT / 'plugins/shopil-plugin'
 
 
 class PackageTests(unittest.TestCase):

@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "SessionStart": [{"matcher": ".*", "hooks": [{"type": "command", "command": "python -c \"import os,runpy;runpy.run_path(os.path.join(os.environ['CLAUDE_PLUGIN_ROOT'],'hooks','agent_hook.py'),run_name='__main__')\"", "timeout": 10}]}],
+    "PreToolUse": [{"matcher": ".*", "hooks": [{"type": "command", "command": "python -c \"import os,runpy;runpy.run_path(os.path.join(os.environ['CLAUDE_PLUGIN_ROOT'],'hooks','agent_hook.py'),run_name='__main__')\"", "timeout": 10, "onFailure": "block"}]}],
+    "PostToolUse": [{"matcher": ".*", "hooks": [{"type": "command", "command": "python -c \"import os,runpy;runpy.run_path(os.path.join(os.environ['CLAUDE_PLUGIN_ROOT'],'hooks','agent_hook.py'),run_name='__main__')\"", "timeout": 10}]}]
+  }
+}
