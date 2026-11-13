@@ -16,7 +16,7 @@ class PackageTests(unittest.TestCase):
         catalog = json.loads((ROOT / '.agents/plugins/marketplace.json').read_text())
         entry = catalog['plugins'][0]
         plugin = ROOT / entry['source']['path']
-        manifest = json.loads((plugin / 'plugin.json').read_text())
+        manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text())
         self.assertEqual(entry['name'], manifest['name'])
         self.assertRegex(manifest['version'], r'^\d+\.\d+\.\d+$')
         for name in ['jira-workflow', 'ponytail', 'shopil-project']:
@@ -67,7 +67,8 @@ class PackageTests(unittest.TestCase):
             second = module.build(Path(directory) / 'b')
             self.assertEqual(first.read_bytes(), second.read_bytes())
             with zipfile.ZipFile(first) as archive:
-                self.assertIn('plugin.json', archive.namelist())
+                self.assertIn('.codex-plugin/plugin.json', archive.namelist())
+                self.assertNotIn('plugin.json', archive.namelist())
                 self.assertIn('THIRD_PARTY_NOTICES.md', archive.namelist())
                 self.assertTrue(any(p.endswith('etl-course-demo-main.zip') for p in archive.namelist()))
                 self.assertFalse(any('__pycache__' in p or '.git/' in p for p in archive.namelist()))

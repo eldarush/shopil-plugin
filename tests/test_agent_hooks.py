@@ -189,7 +189,7 @@ class AgentHooks(unittest.TestCase):
         self.assertEqual({}, json.loads(allowed.stdout))
 
     def test_both_host_configs_and_plugin_manifests(self):
-        portable = json.loads((PLUGIN / 'plugin.json').read_text())
+        portable = json.loads((PLUGIN / '.codex-plugin/plugin.json').read_text())
         claude = json.loads((PLUGIN / '.claude-plugin/plugin.json').read_text())
         self.assertEqual(portable['version'], claude['version'])
         self.assertEqual(portable['name'], claude['name'])
@@ -201,7 +201,8 @@ class AgentHooks(unittest.TestCase):
             result = subprocess.run(command, shell=True, input=json.dumps({'hook_event_name': 'SessionStart', 'cwd': str(self.repo)}), text=True, capture_output=True, env={**os.environ, 'CLAUDE_PLUGIN_ROOT': str(PLUGIN)}, encoding='utf-8')
             self.assertEqual(0, result.returncode, result.stderr)
             self.assertIn('ShopIL', result.stdout)
-        self.assertTrue((PLUGIN / portable['extensions']['com.openai']['hooks']).exists())
+        self.assertTrue((PLUGIN / portable['hooks']).exists())
+        self.assertFalse((PLUGIN / 'plugin.json').exists(), 'Codex 0.162 ignores hooks when a portable root manifest takes precedence')
 
 
 if __name__ == '__main__':

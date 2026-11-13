@@ -46,7 +46,7 @@ This runtime update validates the plugin. Keep lecturer lab environments separat
 With a Codex CLI that supports `plugin`:
 
 ```sh
-codex plugin marketplace add eldarush/shopil-plugin --ref v2.1.0
+codex plugin marketplace add eldarush/shopil-plugin --ref v2.1.1
 codex plugin add shopil-plugin@shopil-plugins
 ```
 
@@ -56,7 +56,7 @@ Trust the installed hooks using `/hooks` (CLI) or the desktop hook review UI. Re
 
 Invoke `$jira-workflow` for a task and `$shopil-project` for assignment context. The workflow explicitly reads its bundled `$ponytail` skill. The standalone Git checker supports configurable project keys; the native agent ownership hooks deliberately target SHOPIL.
 
-The release ZIP contains the portable plugin root (`plugin.json`, `.claude-plugin/`, `hooks/`, `skills/`, license and notices). The repository supplies marketplaces for both hosts. GitHub publication is not approval or listing in a host's official plugin directory.
+The release ZIP contains `.codex-plugin/`, `.claude-plugin/`, `hooks/`, `skills/`, license and notices. The repository supplies marketplaces for both hosts. It uses Codex's supported compatibility manifest because Codex CLI 0.162.0 ignores bundled hooks when a portable root `plugin.json` takes precedence. The compatibility package exposes the same skills and hook scripts for host review. GitHub publication is not approval or listing in a host's official plugin directory.
 
 ## Install in Claude Code
 
@@ -154,7 +154,7 @@ The second command writes a deterministic plugin ZIP and SHA-256 file under `dis
 
 ## Migration from jira-workflow-guard
 
-This repository preserves the original Git history, historical `v1.0.0` tag, course file bytes, extracted text, skills, checker and tests. Only the updated `v2.1.0` release is published; the old release is not offered for installation. The old GitHub repository is retired after verification. Historical release/PR/CI records are exported under `migration/` because GitHub does not transfer their identities between repositories.
+This repository preserves the original Git history, historical `v1.0.0` tag, course file bytes, extracted text, skills, checker and tests. Only the updated `v2.1.1` release is published; the old release is not offered for installation. The old GitHub repository is retired after verification. Historical release/PR/CI records are exported under `migration/` because GitHub does not transfer their identities between repositories.
 
 Remove the old plugin if installed, then remove its marketplace registration:
 
