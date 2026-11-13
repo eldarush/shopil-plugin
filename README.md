@@ -19,20 +19,40 @@ The course bundle is a snapshot from **November 13, 2026**. The observed assignm
 - **Git checks:** ticket-scoped branch names, Conventional Commit messages/PR titles, matching ticket keys, Jira link and validation in PRs, no direct main-branch commits/pushes through installed hooks, and blocked secret/database filenames.
 - **Ponytail:** the user's MIT-marked skill bundled locally, requiring the smallest complete solution and meaningful checks.
 - **ShopIL context:** 15 byte-verified originals (assignment, seven presentations, five PDFs, two complete lab ZIPs), 13 searchable text extracts including available slide notes, source/hash index, implementation requirements and Jira task mapping. Instructor solutions are explicitly reference-only. Annual-project documents are labeled supplemental, not ShopIL requirements.
-- **CI and tests:** standard-library Python unit/integration tests on Windows/Linux and Python 3.11/3.13; real Git-hook rejection tests; ownership and account-switch scenarios; material checksums and reproducible release packaging.
+- **CI and tests:** standard-library Python unit/integration tests on Windows/Linux and Python 3.14.10; real Git-hook rejection tests; ownership and account-switch scenarios; material checksums and reproducible release packaging.
 
 ## Install in Codex
+
+### Python runtime
+
+Use the latest stable **Python 3.14.x**, currently **3.14.10** (verified November 13, 2026), for the plugin, its Git checker and tests. The verified patch is pinned in `.python-version`, CI and the downstream workflow template so installations and validation agree. A future 3.14 patch requires updating and testing the pin; Python 3.15 is not selected.
+
+On Windows, install the [official Python install manager](https://www.python.org/downloads/) if needed, then run:
+
+```powershell
+pymanager install 3.14.10
+py -3.14 --version
+py -3.14 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python --version
+```
+
+The version checks should print `Python 3.14.10`. On Linux/macOS, install [Python 3.14.10](https://www.python.org/downloads/release/python-31410/), then create and activate a virtual environment with `python3.14 -m venv .venv` and `source .venv/bin/activate`.
+
+Native hooks use the current interpreter if it is 3.14.10, otherwise they probe `py -3.14` on Windows and `python3.14`/`python3` on PATH. They reject an unavailable or mismatched runtime. The initial `python` command can be an older Python 3 interpreter; actual hook policy runs on 3.14.10. Standalone Git checks and packaging require 3.14.10 directly. Install per-clone Git hooks from the activated environment so they retain that interpreter's absolute path.
+
+This runtime update validates the plugin. Keep lecturer lab environments separate until their third-party application dependencies have been tested on 3.14.10.
 
 With a Codex CLI that supports `plugin`:
 
 ```sh
-codex plugin marketplace add eldarush/shopil-plugin --ref v2.0.0
+codex plugin marketplace add eldarush/shopil-plugin --ref v2.1.0
 codex plugin add shopil-plugin@shopil-plugins
 ```
 
 Restart or open a new Codex session if the installed skills do not appear. Connect the Atlassian plugin using your own Jira account; use the existing GitHub connector or authenticated GitHub CLI for repository operations. This package never shares the author's credentials or stores access tokens. Each teammate installs and authenticates independently.
 
-Trust the installed hooks using `/hooks` (CLI) or the desktop hook review UI. Re-review changed hook code on upgrades. Python 3.11+ must be available as `python` on PATH.
+Trust the installed hooks using `/hooks` (CLI) or the desktop hook review UI. Re-review changed hook code on upgrades. Python 3.14.10 must be installed. The hook launcher selects it even if the host's `python` points to an older interpreter; see the runtime setup below.
 
 Invoke `$jira-workflow` for a task and `$shopil-project` for assignment context. The workflow explicitly reads its bundled `$ponytail` skill. The standalone Git checker supports configurable project keys; the native agent ownership hooks deliberately target SHOPIL.
 
@@ -45,7 +65,7 @@ claude plugin marketplace add eldarush/shopil-plugin
 claude plugin install shopil-plugin@shopil-plugins
 ```
 
-Open a new session, review/trust the hooks when prompted, and connect Atlassian with your own account. Invoke `/shopil-plugin:jira-workflow` or `/shopil-plugin:shopil-project`. Python 3.11+ (`python` on PATH) and Git are required. See [setup](plugins/shopil-plugin/skills/jira-workflow/references/setup.md) for per-clone Git checks and CI.
+Open a new session, review/trust the hooks when prompted, and connect Atlassian with your own account. Invoke `/shopil-plugin:jira-workflow` or `/shopil-plugin:shopil-project`. Python 3.14.10 and Git are required. A `python` command is needed to bootstrap the hook launcher, which selects the pinned runtime. See [setup](plugins/shopil-plugin/skills/jira-workflow/references/setup.md) for per-clone Git checks and CI.
 
 ## Daily team workflow
 
@@ -103,7 +123,7 @@ Configuration (`.workflow-guard.json`):
 {"project_keys": ["SHOPIL"], "main_branch": "main"}
 ```
 
-The checker is `plugins/shopil-plugin/skills/jira-workflow/scripts/guard.py` and needs Python 3.11+ plus Git. Use the course guides' separate environments for the actual ETL/Streaming application.
+The checker is `plugins/shopil-plugin/skills/jira-workflow/scripts/guard.py` and needs Python 3.14.10 plus Git. Use the course guides' separate environments for the actual ETL/Streaming application.
 
 ```sh
 python path/to/guard.py branch --repo path/to/repo
@@ -123,18 +143,18 @@ The project guide distinguishes mandatory assignment work from optional labs. Bu
 
 ## Develop and verify
 
-No runtime or test dependencies beyond Python 3.11+ and Git:
+No runtime or test dependencies beyond Python 3.14.10 and Git:
 
 ```sh
 python -m unittest discover -s tests -v
 python scripts/package_plugin.py
 ```
 
-The second command writes a deterministic plugin ZIP and SHA-256 file under `dist/`. GitHub Actions executes the same tests and package build on four OS/Python combinations. The test suite creates isolated temporary repositories, exercises actual hooks, and makes no Jira API writes.
+The second command writes a deterministic plugin ZIP and SHA-256 file under `dist/`. GitHub Actions executes the same tests and package build on both operating systems with the pinned Python version. The test suite creates isolated temporary repositories, exercises actual hooks, and makes no Jira API writes.
 
 ## Migration from jira-workflow-guard
 
-This repository preserves the original Git history, historical `v1.0.0` tag, course file bytes, extracted text, skills, checker and tests. Only the updated `v2.0.0` release is published; the old release is not offered for installation. The old GitHub repository is retired after verification. Historical release/PR/CI records are exported under `migration/` because GitHub does not transfer their identities between repositories.
+This repository preserves the original Git history, historical `v1.0.0` tag, course file bytes, extracted text, skills, checker and tests. Only the updated `v2.1.0` release is published; the old release is not offered for installation. The old GitHub repository is retired after verification. Historical release/PR/CI records are exported under `migration/` because GitHub does not transfer their identities between repositories.
 
 Remove the old plugin if installed, then remove its marketplace registration:
 

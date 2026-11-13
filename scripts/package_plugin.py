@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,6 +10,8 @@ PLUGIN = ROOT / 'plugins/shopil-plugin'
 
 
 def build(output=None):
+    if '.'.join(map(str, sys.version_info[:3])) != (ROOT / '.python-version').read_text().strip():
+        raise RuntimeError('Build the plugin with the Python version pinned in .python-version (3.14.10).')
     version = json.loads((PLUGIN / 'plugin.json').read_text(encoding='utf-8'))['version']
     output = Path(output) if output else ROOT / 'dist'
     output.mkdir(parents=True, exist_ok=True)

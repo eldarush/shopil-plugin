@@ -2,7 +2,7 @@
 
 Use only for a user-requested setup. A plugin install alone does not authorize repository changes. Do not install this into an intentionally empty repository without a new request.
 
-Confirm native hooks are trusted in the host (`/hooks` or desktop hook review), Python 3.11+ is on PATH as `python`, and Atlassian is connected as the current teammate. Read current user and the assigned issue with `view="full"`. Start work only on an owned In Progress ticket. SessionStart supplies installed course paths; read the relevant originals. Bootstrap a ticket branch with `git switch -c feature/SHOPIL-N-description` after ownership/status reads. For an empty checkout, obtain explicit initialization instructions rather than silently generating application files.
+Confirm native hooks are trusted in the host (`/hooks` or desktop hook review), Python 3.14.10 is on PATH as `python`, and Atlassian is connected as the current teammate. Read current user and the assigned issue with `view="full"`. Start work only on an owned In Progress ticket. SessionStart supplies installed course paths; read the relevant originals. Bootstrap a ticket branch with `git switch -c feature/SHOPIL-N-description` after ownership/status reads. For an empty checkout, obtain explicit initialization instructions rather than silently generating application files.
 
 1. Inspect existing instructions, CI, Git hooks, and branch rules. Preserve them.
 2. Copy `assets/workflow-guard.example.json` to the target root as `.workflow-guard.json`, set the real project key and default branch, and review the configuration. Copy `scripts/guard.py` to `tools/workflow_guard.py` so checks do not depend on a particular machine's plugin cache.
