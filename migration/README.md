@@ -4,7 +4,7 @@ The former public repository was `eldarush/jira-workflow-guard`. The new canonic
 
 - Original main commit and `v1.0.0`: `06fb12e0f1f04f737faf5b59f929b351ab6adc60`.
 - Original feature branch: `feature/SHOPIL-47-workflow-plugin`, commit `37d75cf638354d8fc38b3386a0fb67e8dcc8e05e`.
-- Both histories and the original release tag are retained. Legacy ZIP/checksum assets are published unchanged under `v1.0.0`; they contain the former plugin name. Install the new `v2.0.0` release.
+- Both histories and the original Git tag are retained. Only the updated `v2.0.0` release is published, as requested. Legacy ZIP/checksum bytes were verified and retained in the local migration backup; they are not a published release in this repository.
 - All 15 course originals and 13 extracts compare byte-for-byte. Ponytail, the Git checker, licenses and notices are retained (plugin-name substitution where applicable). All prior tests remain, with native hook tests added.
 - `verification.json` records source hashes and comparison results. `legacy-github-metadata.json` preserves public repository settings, release metadata, the original PR and discussions/reviews, and CI run metadata as of 2026-11-13.
 
