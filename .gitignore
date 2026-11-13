@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite*
+*.duckdb*
+dist/
+.test-output/
