@@ -192,7 +192,7 @@ def before(event, repo, state, now):
 
 def startup(repo):
     refs = PLUGIN / 'skills/shopil-project/references'
-    lead = f'''ShopIL Plugin 2.0.0 is active. Python/Git checks and native hooks are enabled only when this host trusts them.
+    lead = f'''ShopIL Plugin 2.1.0 is active on Python {sys.version.split()[0]}. Python/Git checks and native hooks are enabled only when this host trusts them.
 Project context: {refs / 'requirements.md'}
 Full course index (15 originals, 13 extracts, labs): {refs / 'course-index.md'}
 Jira task map (read live issues before work): {refs / 'jira-map.md'}
@@ -237,6 +237,7 @@ def session_state(event, repo):
 
 def main():
     try:
+        guard.require(sys.version_info[:3] == guard.PYTHON_VERSION, 'Python 3.14.10 is required; launch this hook through run_hook.py.')
         event = json.load(sys.stdin)
         guard.require(isinstance(event, dict), 'Hook input must be an object')
         repo = repo_root(event.get('cwd') or os.getcwd())

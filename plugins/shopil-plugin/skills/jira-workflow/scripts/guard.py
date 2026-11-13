@@ -10,6 +10,7 @@ import subprocess
 import sys
 
 CONFIG = ".workflow-guard.json"
+PYTHON_VERSION = (3, 14, 10)
 TYPES = ("feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert")
 BRANCH_TYPES = ("feature", "fix", "hotfix", "docs", "refactor", "test", "build", "ci", "chore", "perf")
 
@@ -169,6 +170,7 @@ def main(argv=None):
     parser.add_argument("--ticket")
     args = parser.parse_args(argv)
     try:
+        require(sys.version_info[:3] == PYTHON_VERSION, "Python 3.14.10 is required. Use py -3.14 on Windows or a Python 3.14.10 virtual environment.")
         config_path = args.config or args.repo / CONFIG
         config = load_config(config_path)
         if args.command == "install-hooks":
