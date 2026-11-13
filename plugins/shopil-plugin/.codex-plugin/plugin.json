@@ -1,0 +1,19 @@
+{
+  "name": "shopil-plugin",
+  "version": "2.1.1",
+  "description": "Jira-aware Git workflows, Conventional Commits, Ponytail, and a source-indexed ShopIL course kit.",
+  "author": {"name": "eldarush", "url": "https://github.com/eldarush"},
+  "repository": "https://github.com/eldarush/shopil-plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "hooks": "./hooks/codex-hooks.json",
+  "interface": {
+    "displayName": "ShopIL Plugin",
+    "shortDescription": "Ticket-linked branches, commits, tests, and ShopIL context",
+    "longDescription": "Work from Jira acceptance criteria using Ponytail, native hooks, local Git checks, CI conventions, and bundled ShopIL assignment and course references. Jira mutations use your connected Atlassian tools. GitHub protection is configured separately.",
+    "developerName": "eldarush",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": ["Use ShopIL Plugin to implement my ShopIL ticket.", "Install workflow checks in this repository."]
+  }
+}

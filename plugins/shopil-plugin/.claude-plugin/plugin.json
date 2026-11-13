@@ -1,6 +1,6 @@
 {
   "name": "shopil-plugin",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "ShopIL course context, Ponytail, per-user Jira ownership and Git workflow hooks.",
   "author": {"name": "eldarush"},
   "repository": "https://github.com/eldarush/shopil-plugin",
