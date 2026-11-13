@@ -1,4 +1,4 @@
 interface:
-  display_name: "Jira Workflow Guard"
+  display_name: "ShopIL Plugin"
   short_description: "Ticket-linked branches, commits, tests, and delivery"
   default_prompt: "Use $jira-workflow to complete my Jira ticket with verified checks."

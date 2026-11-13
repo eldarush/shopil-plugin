@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / 'plugins/jira-workflow-guard/skills/jira-workflow/scripts/guard.py'
+SCRIPT = ROOT / 'plugins/shopil-plugin/skills/jira-workflow/scripts/guard.py'
 spec = importlib.util.spec_from_file_location('guard', SCRIPT)
 guard = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(guard)

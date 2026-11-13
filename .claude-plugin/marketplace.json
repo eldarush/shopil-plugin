@@ -1,0 +1,5 @@
+{
+  "name": "shopil-plugins",
+  "owner": {"name": "eldarush"},
+  "plugins": [{"name": "shopil-plugin", "source": "./plugins/shopil-plugin", "description": "ShopIL context and Jira/Git workflow enforcement"}]
+}

@@ -1,0 +1,125 @@
+{
+  "originals_and_extracts": [
+    {
+      "path": "skills/shopil-project/assets/course/28801 - הרצאה מספר 1 - מבוא .pptx",
+      "sha256": "08b78da35114047c30f1a7d1c34289a5f178eeb6c9615b2bbce1ecbca57ec97a"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/28802 - הרצאה מספר 1 - סוכנים.pptx",
+      "sha256": "4d2a0cae21b5c31bfa988aa9d0396340344e62037931cad789c009e2be2736d5"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/28804 - הרצאה מספר 2 - סוכנים.pptx",
+      "sha256": "8190baff232507017a810c5cb0bed86321064b199155ca024dc599fb67fa3d8e"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/30520 - Syllabus_HE (1).pdf",
+      "sha256": "af655e53dad85789dba3ec24875af103b451806175e8d9def234543e10d7fb93"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34688 - תקציר פרוייקט 1 .pdf",
+      "sha256": "a3ca993736a7838bbc5852202033bce74a6ccb4712e90877629010fa630ffa65"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34690 - תקציר פרוייקט 2.pdf",
+      "sha256": "1b1a4a8059d4888e788523cedd59fbcad3b2dde1f507429e5fbfa9b5925b503f"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34691 - תקציר פרוייקט 3.pdf",
+      "sha256": "affba4138982a4206d6354190ee3aacf76fb07b4b17e852b71950cfe58a0f3f3"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34692 - תקציר פרוייקט 4.pdf",
+      "sha256": "05bdf82ff8677390cca05a2fa09e59208652aa3c10738b9e67f32e3914fef53a"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45351 - טעינת נתונים - ETL.pptx",
+      "sha256": "f1dab169788396504e0b2262e2ff024d5c88d470e49515e9d9201d505d676255"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45823 - פגישה בנושא פרויקט שנתי .pptx",
+      "sha256": "7a230705110a57b7931c05e42cb62cf005d739395698dcf80c4408d46a0351eb"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45834 - streaming.pptx",
+      "sha256": "d74a0cafbad30bc66e8fab96b37e4ba734b0ae0ab83467a8fea7de4b26b03d55"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45837 - מטלה מספר 1 (1).docx",
+      "sha256": "b2e3929e6ab512171b483122c5fc6e3243231e66da8e428a53b2312e2a68e905"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/46375 - lecture3_ai_agents_white_complete.pptx",
+      "sha256": "c9a14a26e9654ea7f57785691b921fa545ccb901e944eaa865373ab535751cbe"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/etl-course-demo-main.zip",
+      "sha256": "c0cba97df96e1f59922dbe2bcc3c61f97842fb30362c7b6ff01c349dc549a858"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/streaming-course-demo-main.zip",
+      "sha256": "3f35632d6c9b37a5ce01c4fa028f69ccff5da8852d5dd705c12763cdc70f41cf"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/28801.md",
+      "sha256": "2fe9209837cf5e3748f2504864853cc37b11e0b24ee29d117480e4db60902be7"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/28802.md",
+      "sha256": "98ef75b440569fc8a1eb359408812c175a6ffbda820d47ab4d2a1e8302455001"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/28804.md",
+      "sha256": "c8bade300d3a0ae318095530929deaeaa32fb8841ccba96ff9a6a90d40bd3c1c"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/30520.md",
+      "sha256": "f8186dd21af80b332ec9e628b4409dc5cd28c6fbbac72270ea29e6d819be5eb5"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/34688.md",
+      "sha256": "2b2f63d98322d5484b50235a7425fd7c9c337bbe8be60b7089f4aadd2eada108"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/34690.md",
+      "sha256": "eac5d31c761a262632b19b11e7ea8a5aa4286913c68c3aca948ee62575d8dd8b"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/34691.md",
+      "sha256": "da0ee90122d6d78e899cd08892b7fbcab27bf2e826d9bd45a868a35471f382a6"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/34692.md",
+      "sha256": "a18c1f3847767b0e3af2a69944a306cc2b2b4729b3cd8c23cd00524f18924d0c"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/45351.md",
+      "sha256": "54a569238c784c6d1c20a452adba2743ebe50191908c49f134b9ba453639db5a"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/45823.md",
+      "sha256": "5b0cebd3f7a7a3526731f153cf9b2395bfae95f8de947f865ef3bdc80622e0e0"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/45834.md",
+      "sha256": "11eb4b3efcb11d79f27a54aed4e6188ce3ff36da5123961e2439cf3b6f6e3439"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/45837.md",
+      "sha256": "0ab4d41f7ba9579ee8a4fcda0ba3eab80be4493c4daae35fe4deba6d3f9c8938"
+    },
+    {
+      "path": "skills/shopil-project/references/extracted/46375.md",
+      "sha256": "26b9ed508302003b76145999ab82663fecf68690939a76198c4f89b9e63e4333"
+    }
+  ],
+  "unchanged_core": [
+    "Ponytail body",
+    "Git checker",
+    "licenses/notices (name substitution only)"
+  ],
+  "legacy_zip_sha256": "8ee6d49b4eafad64aa7357fbbea3ad6e1af3d91be3b3641b3cfbe65c184b217c",
+  "old_main": "06fb12e0f1f04f737faf5b59f929b351ab6adc60",
+  "old_feature": "37d75cf638354d8fc38b3386a0fb67e8dcc8e05e",
+  "snapshot": "2026-11-13"
+}

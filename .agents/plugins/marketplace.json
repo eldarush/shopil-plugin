@@ -1,9 +1,9 @@
 {
-  "name": "eldarush-workflows",
+  "name": "shopil-plugins",
   "interface": {"displayName": "eldarush Workflow Plugins"},
   "plugins": [{
-    "name": "jira-workflow-guard",
-    "source": {"source": "local", "path": "./plugins/jira-workflow-guard"},
+    "name": "shopil-plugin",
+    "source": {"source": "local", "path": "./plugins/shopil-plugin"},
     "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
     "category": "Developer Tools"
   }]
