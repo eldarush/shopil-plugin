@@ -1,0 +1,125 @@
+{
+  "snapshot_date": "2026-11-13",
+  "files": [
+    {
+      "path": "skills/shopil-project/assets/course/30520 - Syllabus_HE (1).pdf",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=30520",
+      "sha256": "af655e53dad85789dba3ec24875af103b451806175e8d9def234543e10d7fb93",
+      "bytes": 380994,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/30520.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/28801 - הרצאה מספר 1 - מבוא .pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=28801",
+      "sha256": "08b78da35114047c30f1a7d1c34289a5f178eeb6c9615b2bbce1ecbca57ec97a",
+      "bytes": 470435,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/28801.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/28802 - הרצאה מספר 1 - סוכנים.pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=28802",
+      "sha256": "4d2a0cae21b5c31bfa988aa9d0396340344e62037931cad789c009e2be2736d5",
+      "bytes": 2016224,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/28802.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/28804 - הרצאה מספר 2 - סוכנים.pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=28804",
+      "sha256": "8190baff232507017a810c5cb0bed86321064b199155ca024dc599fb67fa3d8e",
+      "bytes": 671654,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/28804.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/46375 - lecture3_ai_agents_white_complete.pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=46375",
+      "sha256": "c9a14a26e9654ea7f57785691b921fa545ccb901e944eaa865373ab535751cbe",
+      "bytes": 509031,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/46375.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34688 - תקציר פרוייקט 1 .pdf",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=34688",
+      "sha256": "a3ca993736a7838bbc5852202033bce74a6ccb4712e90877629010fa630ffa65",
+      "bytes": 87210,
+      "role": "supplemental annual-project context (not ShopIL requirements)",
+      "text_path": "skills/shopil-project/references/extracted/34688.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34690 - תקציר פרוייקט 2.pdf",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=34690",
+      "sha256": "1b1a4a8059d4888e788523cedd59fbcad3b2dde1f507429e5fbfa9b5925b503f",
+      "bytes": 86705,
+      "role": "supplemental annual-project context (not ShopIL requirements)",
+      "text_path": "skills/shopil-project/references/extracted/34690.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34691 - תקציר פרוייקט 3.pdf",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=34691",
+      "sha256": "affba4138982a4206d6354190ee3aacf76fb07b4b17e852b71950cfe58a0f3f3",
+      "bytes": 72962,
+      "role": "supplemental annual-project context (not ShopIL requirements)",
+      "text_path": "skills/shopil-project/references/extracted/34691.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/34692 - תקציר פרוייקט 4.pdf",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=34692",
+      "sha256": "05bdf82ff8677390cca05a2fa09e59208652aa3c10738b9e67f32e3914fef53a",
+      "bytes": 71404,
+      "role": "supplemental annual-project context (not ShopIL requirements)",
+      "text_path": "skills/shopil-project/references/extracted/34692.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45823 - פגישה בנושא פרויקט שנתי .pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=45823",
+      "sha256": "7a230705110a57b7931c05e42cb62cf005d739395698dcf80c4408d46a0351eb",
+      "bytes": 236364,
+      "role": "supplemental annual-project context (not ShopIL requirements)",
+      "text_path": "skills/shopil-project/references/extracted/45823.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45351 - טעינת נתונים - ETL.pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=45351",
+      "sha256": "f1dab169788396504e0b2262e2ff024d5c88d470e49515e9d9201d505d676255",
+      "bytes": 501183,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/45351.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45834 - streaming.pptx",
+      "source": "https://moodle.colman.ac.il/mod/resource/view.php?id=45834",
+      "sha256": "d74a0cafbad30bc66e8fab96b37e4ba734b0ae0ab83467a8fea7de4b26b03d55",
+      "bytes": 359103,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/45834.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/45837 - מטלה מספר 1 (1).docx",
+      "source": "https://moodle.colman.ac.il/mod/assign/view.php?id=45837",
+      "sha256": "b2e3929e6ab512171b483122c5fc6e3243231e66da8e428a53b2312e2a68e905",
+      "bytes": 143208,
+      "role": "course source",
+      "text_path": "skills/shopil-project/references/extracted/45837.md"
+    },
+    {
+      "path": "skills/shopil-project/assets/course/etl-course-demo-main.zip",
+      "source": "https://github.com/paulavrahami/etl-course-demo",
+      "sha256": "c0cba97df96e1f59922dbe2bcc3c61f97842fb30362c7b6ff01c349dc549a858",
+      "bytes": 128169,
+      "role": "course source",
+      "text_path": null
+    },
+    {
+      "path": "skills/shopil-project/assets/course/streaming-course-demo-main.zip",
+      "source": "https://github.com/paulavrahami/streaming-course-demo",
+      "sha256": "3f35632d6c9b37a5ce01c4fa028f69ccff5da8852d5dd705c12763cdc70f41cf",
+      "bytes": 193272,
+      "role": "course source",
+      "text_path": null
+    }
+  ]
+}
