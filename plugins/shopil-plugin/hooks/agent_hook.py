@@ -139,6 +139,8 @@ def edit_ticket(repo, state, now, branch=None):
 
 
 def before(event, repo, state, now):
+    # Windows TEMP can use an 8.3 alias; compare canonical paths on both sides.
+    repo = Path(repo).resolve()
     name = compact(event.get('tool_name', ''))
     op, args = operation(event)
     scoped = in_project(repo)
