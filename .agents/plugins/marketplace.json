@@ -1,0 +1,10 @@
+{
+  "name": "eldarush-workflows",
+  "interface": {"displayName": "eldarush Workflow Plugins"},
+  "plugins": [{
+    "name": "jira-workflow-guard",
+    "source": {"source": "local", "path": "./plugins/jira-workflow-guard"},
+    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+    "category": "Developer Tools"
+  }]
+}
